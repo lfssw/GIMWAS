@@ -5,26 +5,13 @@ Genetically Imputed Microbiome-Wide Association Study (GIMWAS) is the branded Ja
 GIMWAS is packaged as a Java command-line association workflow that consumes genotype and phenotype inputs, a summary information file, and external PLINK/Rscript executables. This repository keeps the existing implementation intact while standardizing the public program surface around `GIMWAS` for distribution and execution.<br><br>
 ![GIMWAS](GIMWAS_Overview.png)<br>
 
-## Build and Release
-Build the release directory from the repository root:
+## Install
+GIMWAS is a batteries-included JAR executable. All needed external jar packages are included in the downloadable, `RECWAS.jar` 
 
+- To download all necessary files, users can use the command
 ```bash
-./build-gimwas.sh
+git clone https://github.com/lfssw/GIMWAS.git
 ```
-
-This creates:
-
-```text
-dist/GIMWAS/
-  GIMWAS.jar
-  lib/
-  EXAMPLE/
-  SUMMARY_EXAMPLE/
-  README.md
-  GIMWAS_Overview.png
-```
-
-The generated release directory is the supported way to distribute the tool. `GIMWAS.jar` must stay alongside the generated `lib/` directory.
 
 ## Required Software and R Packages
 - PLINK v1.9 (https://www.cog-genomics.org/plink/)
