@@ -2,7 +2,14 @@
 Genetically Imputed Microbiome-Wide Association Study (GIMWAS) is the branded Java command-line tool provided by this repository. The current Java workflow, input arguments, and dependency requirements are preserved; the executable name, CLI entrypoint, user-facing text, and release packaging are standardized around `GIMWAS`.
 
 ## Overview of GIMWAS
-GIMWAS is packaged as a Java command-line association workflow that consumes genotype and phenotype inputs, a summary information file, and external PLINK/Rscript executables. This repository keeps the existing implementation intact while standardizing the public program surface around `GIMWAS` for distribution and execution.<br><br>
+GIMWAS (Genetically Imputed Microbiome-Wide Association Study) is a framework designed to link host genetic variants to microbiome-mediated disease risk, leveraging individual-level genotype and microbiome trait data. GIMWAS comprises three key components. 
+- Marginal screening phase
+In the first phase, GIMWAS identify SNPs associated with specific microbial features—including taxonomic abundance, pathway abundance, and structural variants—using univariate linear models. This approach preserves weak but potentially polygenic signals across the genome.
+- Microbiome-Informed Genetic Kernels
+Instead of modeling SNP effects independently, GIMWAS constructs microbiome-informed genetic similarity kernels that aggregate the marginal effects of selected SNPs, weighted by their association strength. This kernel matrix serves as a data-driven representation of host genetic variation relevant to each microbial trait. 
+- Variance-Component Score Testing
+Finally, GIMWAS applies a variance-component score test to evaluate whether genetically imputed microbiome variation is associated with the disease phenotype.
+This framework enables a powerful, integrative approach to uncovering host–microbiome interactions underlying complex diseases.<br><br>
 ![GIMWAS](GIMWAS_Overview.png)<br>
 
 ## Install
