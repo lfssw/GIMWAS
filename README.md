@@ -6,7 +6,7 @@ GIMWAS is packaged as a Java command-line association workflow that consumes gen
 ![GIMWAS](GIMWAS_Overview.png)<br>
 
 ## Install
-GIMWAS is a batteries-included JAR executable. All needed external jar packages are included in the downloadable, `RECWAS.jar` 
+GIMWAS is a batteries-included JAR executable. All needed external jar packages are included in the downloadable, `GIMWAS.jar` 
 
 - To download all necessary files, users can use the command
 ```bash
